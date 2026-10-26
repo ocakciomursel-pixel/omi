@@ -64,7 +64,7 @@ def effective_sync_language(user_language: str | None, single_language_mode: boo
     multilingual provider instead of misclassifying as 'unknown' or Parakeet.
     """
     raw = user_language.strip() if isinstance(user_language, str) else ''
-    if single_language_mode and raw:
+    if single_language_mode:
         return raw
     if raw and language_guard_enabled() and language_class(raw) == 'unsupported':
         return normalized_stt_language(raw) or raw

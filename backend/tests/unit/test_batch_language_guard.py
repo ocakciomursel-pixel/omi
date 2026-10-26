@@ -194,6 +194,8 @@ async def test_new_batch_intake_routes_by_effective_sync_language(monkeypatch, l
         ('ja', True, 'ja'),
         ('en', False, 'multi'),
         ('en', True, 'en'),
+        ('', True, ''),
+        (None, True, ''),
         ('', False, 'multi'),
         (None, False, 'multi'),
     ],

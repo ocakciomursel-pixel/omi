@@ -43,6 +43,8 @@ def _utterance_word_units(text: str, lang: str | None) -> int:
         non_ws_chars = sum(1 for ch in text if not ch.isspace())
         return max(words, non_ws_chars // 2)
     return words
+
+
 from config.stt_provider_policy import (
     MODULATE_PROVIDER,
     PARAKEET_PROVIDER,
