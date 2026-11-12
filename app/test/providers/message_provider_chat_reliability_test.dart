@@ -97,7 +97,8 @@ void main() {
     expect(provider.messages.any((m) => m.id == 'late-history'), isFalse);
   });
 
-  test('a local message added while history is loading is preserved without duplication when the load completes', () async {
+  test('a local message added while history is loading is preserved without duplication when the load completes',
+      () async {
     final pending = Completer<List<ServerMessage>>();
     final greeting = ServerMessage(
       'greeting',
